@@ -34,9 +34,3 @@ mongoose.connect(process.env.MONGODB_URI)
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en puerto ${PORT}`);
 });
-
-Para solucionar el problema de visualización en tu aplicación desplegada y subir los cambios a Git, debes seguir estos pasos:
-
-## 1. Modificar el archivo index.js
-
-Primero, necesitas añadir una ruta para la página principal que muestre información o redirija a los endpoints de la API:
