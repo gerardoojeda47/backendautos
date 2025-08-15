@@ -12,6 +12,18 @@ const PORT = process.env.PORT || 5000;
 
 app.use(cors()); // Habilitar CORS para todas las rutas
 app.use(express.json());
+
+// Añadir ruta para la página principal
+app.get('/', (req, res) => {
+  res.json({
+    mensaje: 'API de Backend Autos',
+    endpoints: {
+      usuarios: '/api/users',
+      licencias: '/api/licencias'
+    }
+  });
+});
+
 app.use('/api/users', userRoutes);
 app.use('/api/licencias', licenciaRoutes);
 
@@ -22,3 +34,9 @@ mongoose.connect(process.env.MONGODB_URI)
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en puerto ${PORT}`);
 });
+
+Para solucionar el problema de visualización en tu aplicación desplegada y subir los cambios a Git, debes seguir estos pasos:
+
+## 1. Modificar el archivo index.js
+
+Primero, necesitas añadir una ruta para la página principal que muestre información o redirija a los endpoints de la API:
