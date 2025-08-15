@@ -1,0 +1,33 @@
+# inicio  de sesion de postman 
+
+http://localhost:8000/api/users/login
+
+{
+ 
+  "correo": "gerardo@email.com",
+  "contraseña": "123456"
+ 
+}
+
+registro de usuario en postman
+
+http://localhost:8000/api/users/registro
+
+{
+  "nombre": "gerardo ojeda",
+  "correo": "gerardo@email.com",
+  "contraseña": "123456",
+  "confirmarContraseña": "123456"
+}
+
+api  de licencia 
+
+http://localhost:8000/api/licencias
+
+{
+  "nombreCompleto": "gerardo ojeda",
+  "numeroLicencia": "XzzZ78924224",  // Usar un número diferente
+  "email": "gerardo@ejemplo.com",
+  "password": "contraseña123",
+  "confirmarPassword": "contraseña123"
+}
